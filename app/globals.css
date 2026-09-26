@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #f2f3f7;
+  color: #0f172a;
+  font-feature-settings: "cv11", "ss01";
+  overflow-x: clip;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+::selection {
+  background: rgba(99, 102, 241, 0.2);
+}
+
+/* Shimmer for skeleton */
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+.skeleton-shimmer {
+  background: linear-gradient(90deg, #eef0f4 25%, #f7f8fb 37%, #eef0f4 63%);
+  background-size: 800px 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+/* Touch comfort: 44px+ targets on coarse pointers */
+@media (pointer: coarse) {
+  button,
+  a {
+    min-height: 44px;
+  }
+}
+
+/* Prevent tiny fixed text from overflowing on very small screens */
+@media (max-width: 360px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .skeleton-shimmer {
+    animation: none;
+  }
+}
