@@ -1,0 +1,395 @@
+================================================================================
+AI PROMPT HISTORY — TASK 1: ORDER TRACKING SCREEN
+================================================================================
+
+Project:     Mobile Order Tracking application (Next.js 14 + React + TypeScript
+             + Tailwind CSS + Lucide React + Framer Motion)
+
+Assessment:  Task 1 — Order Tracking Screen 
+AI tool(s):  Cline (VS Code extension)
+Dates:       September 26–27, 2026
+Prepared:    September 27, 2026
+
+
+================================================================================
+PROMPT 1
+================================================================================
+
+You are a senior frontend engineer and UI/UX designer.
+
+Build a complete production-quality mobile-first Order Tracking application.
+
+Tech stack:
+- Next.js 14+
+- React
+- TypeScript
+- Tailwind CSS
+- Lucide React icons
+- Framer Motion animations
+
+The project should be clean, responsive, and ready for Vercel deployment.
+
+====================================
+
+PROJECT GOAL:
+
+Create a premium ecommerce order tracking experience.
+
+The current app only shows:
+- Processing
+- Shipped
+- Out for Delivery
+- Delivered
+
+Users find the status unclear.
+
+Redesign the experience so users understand delivery status immediately.
+
+====================================
+
+DESIGN DIRECTION:
+
+Style:
+- Apple-inspired
+- Premium SaaS mobile app
+- Minimal clean interface
+- White background
+- Soft blue/purple gradient accents
+- Rounded cards (20-24px radius)
+- Premium shadows
+- Spacious layout
+- Professional typography
+- Mobile width optimized (360px-430px)
+
+The UI should look like a real ecommerce mobile application.
+
+Do NOT create a desktop dashboard.
+
+The main content should look like a phone screen.
+
+====================================
+
+CREATE THESE COMPONENTS:
+
+components/
+
+1. Header.tsx
+
+Contains:
+- Back button
+- "Order Tracking"
+- Small subtitle
+
+2. ProductCard.tsx
+
+Display:
+
+Product image
+Product name
+Order ID
+Seller name
+Expected delivery date
+
+Example:
+
+Wireless Headphones
+
+Order #TRK-92831
+
+Expected Delivery
+
+September 28, 2026
+
+3. StatusCard.tsx
+
+Dynamic status card.
+
+Support 3 states:
+
+====================================
+
+STATE 1:
+
+DELAYED ORDER
+
+Show:
+
+Warning icon
+"Delivery Delayed"
+Message:
+"Your package is taking longer than expected."
+
+Show:
+New estimated delivery
+Tomorrow, 2:00 PM
+
+Actions:
+Button:
+"Report Issue"
+
+Color:
+Orange/red gradient
+
+====================================
+
+STATE 2:
+
+DELIVERED BUT NOT RECEIVED
+
+Show:
+Success icon
+"Marked Delivered"
+Message:
+"We show this order as delivered, but you haven't received it."
+
+Actions:
+"Contact Support"
+"Report Missing Package"
+
+Color:
+Green gradient
+
+====================================
+
+STATE 3:
+
+TRACKING NOT AVAILABLE YET
+
+Show:
+Package icon
+"Preparing Shipment"
+Message:
+"Tracking information is not available yet."
+
+Show:
+"Expected update within 24 hours"
+
+Action:
+"Refresh Tracking"
+
+Color:
+Blue gradient
+
+====================================
+
+4. Timeline.tsx
+
+
+Create a beautiful delivery timeline.
+
+Steps:
+
+Order Confirmed
+
+Processing
+
+Shipped
+
+Out for Delivery
+
+Delivered
+
+Features:
+
+Completed:
+green circle
+
+Current:
+animated circle
+
+Upcoming:
+gray circle
+
+Use vertical timeline.
+
+====================================
+
+5. SupportCard.tsx
+
+
+Create:
+
+"Need help?"
+
+Buttons:
+
+Contact Support
+
+Chat with us
+
+====================================
+
+6. StateSwitcher.tsx
+
+
+For demo purposes add a small control:
+
+View Demo State
+
+Buttons:
+
+Delayed
+
+Delivered
+
+No Tracking
+
+Changing this should update the entire screen.
+
+====================================
+
+MAIN PAGE:
+
+app/page.tsx
+
+
+Layout:
+
+Mobile container:
+
+max-width:
+430px
+
+Centered.
+
+Structure:
+
+Header
+
+
+Product Card
+
+
+Status Card
+
+
+Timeline
+
+
+Support Card
+
+
+State Switcher
+
+====================================
+
+MOCK DATA:
+
+Create:
+
+data/orders.ts
+
+Include:
+
+product name
+image
+order id
+delivery date
+status
+timeline
+
+====================================
+
+UX REQUIREMENTS:
+
+Implement:
+
+Loading state skeleton
+Empty state
+Error friendly state
+
+Use smooth animations.
+
+Add hover/tap animations.
+
+Buttons should feel interactive.
+
+====================================
+
+QUALITY REQUIREMENTS:
+
+Code must be:
+
+Clean
+Component based
+Reusable
+TypeScript typed
+No unnecessary libraries
+No backend
+
+====================================
+
+FINAL OUTPUT:
+
+After building:
+
+1. Make sure npm run build works.
+
+2. Create README.md with:
+Installation
+Running locally
+Deployment instructions
+
+3. Make UI polished enough for a frontend assessment.
+
+Do not stop at creating files.
+Actually implement all components and styling.
+
+
+================================================================================
+PROMPT 2
+================================================================================
+
+Act as a senior UI/UX designer and frontend engineer.
+
+Review my current Order Tracking app and transform it into a polished, production-quality mobile application.
+
+Improve the complete UI/UX:
+
+- Make it look like a premium ecommerce app (Apple/Shopify style)
+- Keep mobile-first design (360px–430px)
+- Improve spacing, typography, colors, and visual hierarchy
+- Use modern cards, soft shadows, rounded corners, and subtle gradients
+- Make the status card, product card, timeline, and support section look professional
+- Add smooth Framer Motion animations and better interactions
+- Remove anything unnecessary or inconsistent
+- Keep the design clean, minimal, and realistic
+
+Review the whole project structure and improve code quality:
+- Clean components
+- Better TypeScript practices
+- Remove unused code
+- Fix UI issues
+- Ensure responsive behavior
+
+Final goal:
+Make this look like a finished frontend product ready for a professional job assessment, not a demo project.
+
+
+================================================================================
+PROMPT 3
+================================================================================
+
+Act as a senior frontend engineer.
+
+Review my entire project before deployment.
+
+Tasks:
+
+- Check all files and project structure
+- Find and fix all errors (TypeScript, React, Next.js, Tailwind, imports, components)
+- Remove unused code and unnecessary dependencies
+- Fix console errors and warnings
+- Improve code quality and organization
+- Verify all pages and components work correctly
+- Check responsive behavior
+
+Before deployment:
+
+- Run build check (`npm run build`)
+- Fix any build errors
+- Verify production readiness
+- Check environment configuration
+- Make sure the project is ready for Vercel deployment
+
+Do not only explain issues. Apply the fixes and leave the project clean and deployment-ready.
